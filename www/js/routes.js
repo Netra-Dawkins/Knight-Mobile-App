@@ -17,6 +17,10 @@ var routes = [
     }
   },
   {
+    path: '/stats/',
+    url: './pages/stats.html',
+  },
+  {
     path: '/about/',
     url: './pages/about.html',
   },

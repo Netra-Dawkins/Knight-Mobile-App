@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#993030">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <title>MyApp</title>
+  <title>Knight Mobile App</title>
   
   
   
@@ -65,19 +65,17 @@
       <!-- Tabbar for switching views-tabs -->
       <div class="toolbar toolbar-bottom tabbar-labels">
         <div class="toolbar-inner">
-          <a href="#view-home" class="tab-link tab-link-active">
-            <i class="icon f7-icons">house_fill</i>
-            <span class="tabbar-label">Home</span>
+          <a href="#view-stats" class="tab-link tab-link-active">
+            <i class="icon f7-icons">person_fill</i>
+            <span class="tabbar-label">Statistiques</span>
           </a>
-          <a href="#view-catalog" class="tab-link">
-            <i class="icon f7-icons if-not-md">square_list_fill</i>
-            <i class="icon material-icons if-md">view_list</i>
-            <span class="tabbar-label">Catalog</span>
+          <a href="#view-equipements" class="tab-link">
+            <i class="icon f7-icons">briefcase_fill</i>
+            <span class="tabbar-label">Equipements</span>
           </a>
-          <a href="#view-settings" class="tab-link">
-            <i class="icon f7-icons if-not-md">gear</i>
-            <i class="icon material-icons if-md">settings</i>
-            <span class="tabbar-label">Settings</span>
+          <a href="#view-notes" class="tab-link">
+            <i class="icon f7-icons">doc_plaintext</i>
+            <span class="tabbar-label">Notes</span>
           </a>
         </div>
       </div>
@@ -177,17 +175,17 @@
       <!--</div>-->
 
       <!-- Home View -->
-      <div id="view-home" class="view view-init tab tab-active" data-name="home" data-url="/home/">
+      <div id="view-stats" class="view view-init tab tab-active" data-name="stats" data-url="/stats/">
         <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
       </div>
 
       <!-- Catalog View -->
-      <div id="view-catalog" class="view view-init tab" data-name="catalog" data-url="/catalog/">
+      <div id="view-equipements" class="view view-init tab" data-name="equipements" data-url="/equipements/">
         <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
       </div>
 
       <!-- Settings View -->
-      <div id="view-settings" class="view view-init tab" data-name="settings" data-url="/settings/">
+      <div id="view-notes" class="view view-init tab" data-name="notes" data-url="/notes/">
         <!-- Settings page will be loaded here dynamically from /settings/ route -->
       </div>
     </div>
