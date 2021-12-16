@@ -17,6 +17,10 @@ var routes = [
     }
   },
   {
+    path: '/personnage-creation/',
+    url: './pages/personnageCreation.html',
+  },
+  {
     path: '/about/',
     url: './pages/about.html',
   },
