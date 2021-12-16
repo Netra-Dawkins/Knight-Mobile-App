@@ -30,26 +30,9 @@ var routes = [
     url: './pages/stats.html',
   },
   {
-    path: '/about/',
-    url: './pages/about.html',
+    path: '/stuff/',
+    url: './pages/stuff.html',
   },
-  {
-    path: '/form/',
-    url: './pages/form.html',
-  },
-  {
-    path: '/catalog/',
-    componentUrl: './pages/catalog.html',
-  },
-  {
-    path: '/product/:id/',
-    componentUrl: './pages/product.html',
-  },
-  {
-    path: '/settings/',
-    url: './pages/settings.html',
-  },
-
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     componentUrl: './pages/dynamic-route.html',

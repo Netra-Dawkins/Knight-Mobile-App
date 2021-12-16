@@ -1,13 +1,17 @@
 
 function personnageCreationInit() {
     $('#submit-personnage-creation').on('click', function () {
-        console.log('ok!');
-        const storedData = app.form.convertToData('#form-personnage-creation');
-        console.log(storedData);
-        if(storedData) {
-            console.log(JSON.stringify(storedData));
+        const perso = app.form.convertToData('#form-personnage-creation');
+        const id = app.utils.id().toString();
+
+        let dataArray = {};
+        if(!localStorage.getItem('personnages')) {
+            dataArray[id] = perso;
+            localStorage.setItem('personnages', JSON.stringify(dataArray));
         } else {
-            console.log('No !');
+            dataArray = JSON.parse(localStorage.getItem('personnages'));
+            dataArray[id] = perso;
+            localStorage.setItem('personnages', JSON.stringify(dataArray));
         }
     });
 }
