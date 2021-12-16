@@ -21,6 +21,10 @@ var routes = [
     url: './pages/personnageCreation.html',
   },
   {
+    path: '/stats/',
+    url: './pages/stats.html',
+  },
+  {
     path: '/about/',
     url: './pages/about.html',
   },
