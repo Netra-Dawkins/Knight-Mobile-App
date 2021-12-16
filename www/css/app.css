@@ -53,6 +53,11 @@
     calc(var(--b) + (255 - var(--b)) * var(--progress))
   );
 }
+
+.theme-dark {
+  --f7-page-bg-color: #333 !important;
+}
+
 .theme-dark .navbar-large-transparent,
 .theme-dark .navbar-large.navbar-transparent {
   --f7-navbar-large-title-text-color: #fff;
