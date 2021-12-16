@@ -59,3 +59,28 @@
 }
 
 /* Your app custom styles here */
+.statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statistic:first-child .statistic-value {
+  border-radius: 0%;
+}
+
+.statistic-name {
+
+}
+
+.statistic-value {
+  background-color: green;
+  border: solid 1px red;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
