@@ -21,7 +21,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Genre</div>
                 <div class="item-input-wrap">
-                  <select>
+                  <select name="genre">
                     <option>Homme</option>
                     <option>Femme</option>
                   </select>
@@ -34,7 +34,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Armure</div>
                 <div class="item-input-wrap">
-                  <select>
+                  <select name="armure">
                     <option>Warrior</option>
                     <option>Paladin</option>
                     <option>Priest</option>
@@ -54,7 +54,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Nom</div>
                 <div class="item-input-wrap">
-                  <input type="text" placeholder="Nom"/>
+                  <input name="nom" type="text" placeholder="Nom"/>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Surnom</div>
                 <div class="item-input-wrap">
-                  <input type="email" placeholder="Surnom"/>
+                  <input name="surnom" type="text" placeholder="Surnom"/>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Nom de l'IA</div>
                 <div class="item-input-wrap">
-                  <input type="url" placeholder="Nom de l'IA"/>
+                  <input name="nomIA" type="text" placeholder="Nom de l'IA"/>
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Archétype</div>
                 <div class="item-input-wrap">
-                  <input type="password" placeholder="Archétype"/>
+                  <input name="archetype" type="text" placeholder="Archétype"/>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Haut-Fait</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Haut-Fait"/>
+                  <input name="hautFait" type="text" placeholder="Haut-Fait"/>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Section</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Section"/>
+                  <input name="section" type="text" placeholder="Section"/>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Avantages</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Avantages"/>
+                  <input name="avantages" type="text" placeholder="Avantages"/>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Inconvénients</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Inconvénients"/>
+                  <input name="inconvenients" type="text" placeholder="Inconvénients"/>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Motivation Majeure</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Motivation Majeure"/>
+                  <input name="motivationMajeure" type="text" placeholder="Motivation Majeure"/>
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Motivations Mineures</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Motivations Mineures"/>
+                  <input name="motivationsMineures" type="text" placeholder="Motivations Mineures"/>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Langues</div>
                 <div class="item-input-wrap">
-                  <input type="tel" placeholder="Langues"/>
+                  <input name="langues" type="text" placeholder="Langues"/>
                 </div>
               </div>
             </div>
@@ -164,7 +164,7 @@
               <div class="item-inner">
                 <div class="item-title item-label">Date de naissance</div>
                 <div class="item-input-wrap">
-                  <input type="date" placeholder="Date de naissance"/>
+                  <input name="dateNaissance" type="date" placeholder="Date de naissance"/>
                 </div>
               </div>
             </div>
@@ -174,18 +174,19 @@
               <div class="item-inner">
                 <div class="item-title item-label">Bio</div>
                 <div class="item-input-wrap">
-                  <textarea placeholder="Bio"></textarea>
+                  <textarea name="bio" placeholder="Bio"></textarea>
                 </div>
               </div>
             </div>
           </li>
         </ul>
       </div>
-      <div class="block">
-        <p class="row">
-          <a id="submit-personnage-creation" href="#" class="col button button-large button-fill button-raised color-green">Créer</a>
-        </p>
-      </div>
     </form>
+    <div class="block">
+      <p class="row">
+        <a id="submit-personnage-creation" href="/home" class="col button button-large button-fill button-raised color-green">Créer</a>
+      </p>
+    </div>
   </div>
 </div>
+

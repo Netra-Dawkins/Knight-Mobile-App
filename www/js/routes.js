@@ -19,6 +19,11 @@ var routes = [
   {
     path: '/personnage-creation/',
     url: './pages/personnageCreation.html',
+    on: {
+      pageInit: function init(e, page) {
+        personnageCreationInit();
+      }
+    }
   },
   {
     path: '/stats/',
