@@ -64,28 +64,88 @@
 }
 
 /* Your app custom styles here */
-.statistic {
+.statistic-content{
+  padding: 2vw 5vw;
+}
+
+.statistic,
+.second-statistic {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
-.statistic:first-child .statistic-value {
-  border-radius: 0%;
+.second-statistic .statistic-value {
+  border-radius: 5%;
 }
 
 .statistic-name {
+  font-size: 4.5vw;
+}
 
+.statistic:first-child .statistic-value {
+  border-radius: 5%;
 }
 
 .statistic-value {
-  background-color: green;
-  border: solid 1px red;
+  background-color: #000;
+  border: solid .5px rgb(156, 156, 156);
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  font-size: 6vw;
+  width: 14vw;
+  height: 14vw;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.statistic-optional-value {
+  position: absolute;
+  z-index: 10;
+  right: -0.2vw;
+  bottom: -2vw;
+}
+
+.second-statistic-optional-value {
+  position: absolute;
+  z-index: 10;
+  bottom: -3vw;
+  width: 10vw;
+  height: 5.5vw;
+  background-color: rgb(231, 231, 231);
+  border-radius: 10%;
+  line-height: 5.5vw;
+  color: #000;
+}
+
+hr {
+  width: 30%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.counter {
+  margin: 2rem 2vw;
+}
+
+.counter-content {
+  padding: 0 4vw;
+}
+
+.counter-label {
+  font-size: 5vw;
+}
+
+.counter-value {
+  font-size: 6vw;
+}
+
+.counter-main-container {
+  border-right: 1px solid rgb(156, 156, 156);
+  border-left: 1px solid rgb(156, 156, 156);
+  padding: 2vw 0;
 }
