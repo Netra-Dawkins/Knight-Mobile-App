@@ -7,14 +7,14 @@ var routes = [
   {
     path: '/home',
     url: './pages/home.html',
-    on: {
-      pageAfterIn: function test(e, page) {
-        console.log('ok!');
-      },
-      pageInit: function test2(e, page) {
-        console.log('ok2!');
-      }
-    }
+    // on: {
+    //   pageAfterIn: function test(e, page) {
+    //     console.log('ok!');
+    //   },
+    //   pageInit: function test2(e, page) {
+    //     console.log('ok2!');
+    //   }
+    // }
   },
   {
     path: '/personnage-creation/',

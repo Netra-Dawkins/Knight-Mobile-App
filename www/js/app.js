@@ -5,6 +5,7 @@ var app = new Framework7({
   name: 'Knight-Mobile-App', // App name
   theme: 'md', // Automatic theme detection
   el: '#app', // App root element
+  autoDarkTheme: true,
 
   id: 'io.framework7.myapp', // App bundle ID
   // App store
