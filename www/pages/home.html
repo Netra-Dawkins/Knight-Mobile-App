@@ -16,24 +16,38 @@
     </a>
   </div>
   <div class="page-content">
-    <div class="card">
-      <div class="card-content card-content-padding">
-        <div class="row display-flex align-items-center text-align-center">
-          <div class="col-25">
-            <img src="https://image.shutterstock.com/z/stock-photo-online-marketing-financial-report-chart-data-analysis-and-web-development-concept-hand-holding-1974357857.jpg" alt="Image de test" width="50px" height="50px">
-          </div>
-          <div class="col-50">
-            <p>
-              Ce personnage est trop bien wallah
-            </p>
-          </div>
-          <div class="col-25">
-            <a href="/stats/">
-              <i class="icon f7-icons">play_fill</i>
-            </a>
+    <template>
+      <!--{{#each personnages}}-->
+      <div class="card">
+        <div class="card-content card-content-padding">
+          <div class="row display-flex align-items-center text-align-center">
+            <div class="col-25">
+              <img src="https://image.shutterstock.com/z/stock-photo-online-marketing-financial-report-chart-data-analysis-and-web-development-concept-hand-holding-1974357857.jpg" alt="Image de test" width="50px" height="50px">
+            </div>
+            <div class="col-50">
+              <p>
+                {{personnages}}
+              </p>
+            </div>
+            <div class="col-25">
+              <a href="/stats/">
+                <i class="icon f7-icons">play_fill</i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <!--{{/each}}-->
+    </template>
+    <script>
+      //console.log(JSON.parse(localStorage.getItem('personnages')))
+      export default {
+        data: function() {
+          return {
+            personnages: 'test'
+          }
+        }
+      }
+    </script>
   </div>
 </div>

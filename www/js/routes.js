@@ -6,13 +6,11 @@ var routes = [
   },
   {
     path: '/home',
-    url: './pages/home.html',
+    componentUrl: './pages/home.html',
     // on: {
-    //   pageAfterIn: function test(e, page) {
-    //     console.log('ok!');
-    //   },
-    //   pageInit: function test2(e, page) {
-    //     console.log('ok2!');
+    //   pageInit: function() {
+    //     var html = Template7.templates.interestTemplate(JSON.parse(localStorage.getItem('personnages')));
+    //     console.log('html',html);
     //   }
     // }
   },
