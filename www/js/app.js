@@ -7,6 +7,12 @@ var app = new Framework7({
   el: '#app', // App root element
   autoDarkTheme: true,
 
+  touch: {
+    tapHold: true, //enable tap hold events
+    tapHoldDelay: 500,
+    tapHoldPreventClicks: true,
+  },
+
   id: 'io.framework7.myapp', // App bundle ID
   // App store
   store: store,

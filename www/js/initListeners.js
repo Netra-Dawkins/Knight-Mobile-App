@@ -15,3 +15,15 @@ function personnageCreationInit() {
         }
     });
 }
+
+function stuffInit() {
+    $('.open-dialog').on('taphold', function () {
+        const elements = [this][0].innerText.split('\n\n');
+
+        app.dialog.alert(`
+            <input type="text" value="${elements[0]}" />
+            <br />
+            <input type="text" value="${elements[1]}" />
+        `);
+    });
+}

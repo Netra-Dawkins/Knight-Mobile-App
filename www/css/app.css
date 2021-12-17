@@ -64,6 +64,9 @@
 }
 
 /* Your app custom styles here */
+
+/* #### Stats #### */
+
 .statistic-content{
   padding: 2vw 5vw;
 }
@@ -148,4 +151,16 @@ hr {
   border-right: 1px solid rgb(156, 156, 156);
   border-left: 1px solid rgb(156, 156, 156);
   padding: 2vw 0;
+}
+
+/* #### Stuffs #### */
+
+.open-dialog {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.stuff-content {
+  margin: 0 1rem;
 }
