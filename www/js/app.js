@@ -2,8 +2,6 @@ var $ = Dom7;
 
 var device = Framework7.getDevice();
 var app = new Framework7({
-  // template7Pages: true,
-  // precompileTemplates: true,
   name: 'Knight-Mobile-App', // App name
   theme: 'md', // Automatic theme detection
   el: '#app', // App root element
@@ -33,7 +31,6 @@ var app = new Framework7({
         // Init cordova APIs (see cordova-app.js)
         cordovaApp.init(f7);
       }
-      console.log(JSON.parse(localStorage.getItem('personnages')));
     },
   },
 });

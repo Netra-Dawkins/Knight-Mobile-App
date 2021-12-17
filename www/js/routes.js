@@ -7,12 +7,6 @@ var routes = [
   {
     path: '/home',
     componentUrl: './pages/home.html',
-    // on: {
-    //   pageInit: function() {
-    //     var html = Template7.templates.interestTemplate(JSON.parse(localStorage.getItem('personnages')));
-    //     console.log('html',html);
-    //   }
-    // }
   },
   {
     path: '/personnage-creation/',

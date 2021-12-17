@@ -1,53 +1,54 @@
-<div class="page" data-name="home">
-  <div class="navbar">
-    <div class="navbar-bg"></div>
-    <div class="navbar-inner sliding">
-      <div class="right">
-        <a href="#" class="link icon-only panel-open" data-panel="right">
-          <i class="icon f7-icons">menu</i>
-        </a>
+<template>
+  <div class="page" data-name="home">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="right">
+          <a href="#" class="link icon-only panel-open" data-panel="right">
+            <i class="icon f7-icons">menu</i>
+          </a>
+        </div>
+        <div class="title">Knight Mobile App</div>
       </div>
-      <div class="title">Knight Mobile App</div>
     </div>
-  </div>
-  <div class="fab fab-right-bottom color-orange">
-    <a href="/personnage-creation/">
-      <i class="icon f7-icons">plus</i>
-    </a>
-  </div>
-  <div class="page-content">
-    <template>
-      <!--{{#each personnages}}-->
+    <div class="fab fab-right-bottom color-orange">
+      <a href="/personnage-creation/">
+        <i class="icon f7-icons">plus</i>
+      </a>
+    </div>
+    <div class="page-content">
+      ${listePersonnages.map(personnage => $h`
       <div class="card">
         <div class="card-content card-content-padding">
           <div class="row display-flex align-items-center text-align-center">
             <div class="col-25">
-              <img src="https://image.shutterstock.com/z/stock-photo-online-marketing-financial-report-chart-data-analysis-and-web-development-concept-hand-holding-1974357857.jpg" alt="Image de test" width="50px" height="50px">
             </div>
             <div class="col-50">
               <p>
-                {{personnages}}
+                ${personnage.nom}
               </p>
             </div>
             <div class="col-25">
-              <a href="/stats/">
+              <a href="/stats/" data-personnage-id="">
                 <i class="icon f7-icons">play_fill</i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <!--{{/each}}-->
-    </template>
-    <script>
-      //console.log(JSON.parse(localStorage.getItem('personnages')))
-      export default {
-        data: function() {
-          return {
-            personnages: 'test'
-          }
-        }
-      }
-    </script>
+      `)}
+    </div>
   </div>
-</div>
+</template>
+
+<script>
+  export default (props, { $f7, $on }) => {
+    const personnages = JSON.parse(localStorage.getItem('personnages'));
+    const listePersonnages = [];
+    Object.keys(personnages).forEach(key => {
+      listePersonnages.push(personnages[key])
+    });
+    // component function must return render function
+    return $render;
+  }
+</script>
