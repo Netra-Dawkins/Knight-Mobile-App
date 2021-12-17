@@ -6,15 +6,7 @@ var routes = [
   },
   {
     path: '/home',
-    url: './pages/home.html',
-    // on: {
-    //   pageAfterIn: function test(e, page) {
-    //     console.log('ok!');
-    //   },
-    //   pageInit: function test2(e, page) {
-    //     console.log('ok2!');
-    //   }
-    // }
+    componentUrl: './pages/home.html',
   },
   {
     path: '/personnage-creation/',
