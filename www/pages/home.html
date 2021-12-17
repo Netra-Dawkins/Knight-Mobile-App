@@ -45,9 +45,12 @@
   export default (props, { $f7, $on }) => {
     const personnages = JSON.parse(localStorage.getItem('personnages'));
     const listePersonnages = [];
-    Object.keys(personnages).forEach(key => {
-      listePersonnages.push(personnages[key])
-    });
+
+    if (listePersonnages.length > 0) {
+      Object.keys(personnages).forEach(key => {
+        listePersonnages.push(personnages[key])
+      });
+    }
     // component function must return render function
     return $render;
   }
