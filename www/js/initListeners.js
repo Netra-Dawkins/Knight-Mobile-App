@@ -7,7 +7,6 @@ function personnageCreationInit() {
         perso['id'] = id;
 
         for (const [key, value] of Object.entries(app.form.convertToData('#form-personnage-creation'))) {
-            console.log(value);
             perso[key] = value;
         }
 
@@ -24,9 +23,7 @@ function personnageCreationInit() {
 
 function homeInit() {
     $('.personnageRedirection').on('click', function (e) {
-        console.log(this.dataset.personnageId);
         localStorage.setItem('currentPersonnage', this.dataset.personnageId);
-
     });
 }
 

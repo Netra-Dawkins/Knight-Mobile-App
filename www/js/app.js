@@ -47,7 +47,6 @@ var app = new Framework7({
 
         localStorage.setItem('currentPersonnage', 'empty');
       }
-      console.log(localStorage.getItem('personnages'));
     },
   },
 });
