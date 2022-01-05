@@ -54,6 +54,7 @@ function statsInit() {
 
     $('.open-dialog-carac').on('taphold', function () {
         const statName = this.dataset.statName;
+        const caracDiv = this.querySelector("div");
 
         var dialog = app.dialog.create({
             title: "Modifier la Caractéristique",
@@ -61,10 +62,10 @@ function statsInit() {
                <div class="statistic col-25">
                   <span class="statistic-name">${this.querySelector("span").innerHTML}</span>
                   <div class="statistic-value">
-                      <input id="statistic-input-base" type="number" class="statistic-input" value="${this.querySelector("div").firstChild.data}"/>
+                      <input id="statistic-input-base" type="number" class="statistic-input" value="${caracDiv.firstChild.data}"/>
                   </div>
                   <div class="statistic-value">
-                      <input id="statistic-input-od" type="number" class="statistic-input" value="${this.querySelector("div").lastChild.innerText}"/>
+                      <input id="statistic-input-od" type="number" class="statistic-input" value="${caracDiv.lastChild.innerText}"/>
                   </div>
                </div>
             `,
@@ -73,6 +74,8 @@ function statsInit() {
                 personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['base'] = dialog.$el.find('#statistic-input-base').val();
                 personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['od'] = dialog.$el.find('#statistic-input-od').val();
                 localStorage.setItem("personnages", JSON.stringify(personnages));
+                caracDiv.firstChild.data = dialog.$el.find('#statistic-input-base').val();
+                caracDiv.lastChild.innerText = dialog.$el.find('#statistic-input-od').val();
             }
         }).open();
     });
