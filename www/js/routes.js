@@ -25,6 +25,11 @@ var routes = [
   {
     path: '/stats/',
     componentUrl: './pages/stats.html',
+    on: {
+      pageInit: function init(e, page) {
+        statsInit();
+      }
+    }
   },
   {
     path: '/stuff/',

@@ -87,6 +87,11 @@
   font-size: 4.5vw;
 }
 
+.statistic-input {
+  width: 100%;
+  text-align: center;
+}
+
 .statistic:first-child .statistic-value {
   border-radius: 5%;
 }
