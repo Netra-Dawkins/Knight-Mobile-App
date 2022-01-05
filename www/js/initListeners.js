@@ -50,29 +50,30 @@ function statsInit() {
         }).open();
     });
 
-    // $('.open-dialog-carac').on('taphold', function () {
-    //     const statName = this.dataset.statName;
-    //     var dialog = app.dialog.create({
-    //         title: "Modifier la Caractéristique",
-    //         text: `
-    //            <div class="statistic col-25">
-    //               <span class="statistic-name">${this.querySelector("span").innerHTML}</span>
-    //               <div class="statistic-value">
-    //                  <input type="number" class="statistic-input-base" value="${this.querySelector("div").innerText}"/>
-    //                  <div class="statistic-optional-value">
-    //                     <input type="number" class="statistic-input-od" value="${this.querySelector("div div").innerText}"/>
-    //                  </div>
-    //               </div>
-    //            </div>
-    //         `,
-    //         buttons: [{text: '<i class="icon f7-icons">checkmark_2</i>'}],
-    //         onClick: function (dialog, index) {
-    //             personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['base'] = dialog.$el.find('.statistic-input-base').val();
-    //             personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['od'] = dialog.$el.find('.statistic-input-od').val();
-    //             localStorage.setItem("personnages", JSON.stringify(personnages));
-    //         }
-    //     }).open();
-    // });
+    $('.open-dialog-carac').on('taphold', function () {
+        const statName = this.dataset.statName;
+
+        var dialog = app.dialog.create({
+            title: "Modifier la Caractéristique",
+            text: `
+               <div class="statistic col-25">
+                  <span class="statistic-name">${this.querySelector("span").innerHTML}</span>
+                  <div class="statistic-value">
+                      <input id="statistic-input-base" type="number" class="statistic-input" value="${this.querySelector("div").firstChild.data}"/>
+                  </div>
+                  <div class="statistic-value">
+                      <input id="statistic-input-od" type="number" class="statistic-input" value="${this.querySelector("div").lastChild.innerText}"/>
+                  </div>
+               </div>
+            `,
+            buttons: [{text: '<i class="icon f7-icons">checkmark_2</i>'}],
+            onClick: function (dialog, index) {
+                personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['base'] = dialog.$el.find('#statistic-input-base').val();
+                personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['od'] = dialog.$el.find('#statistic-input-od').val();
+                localStorage.setItem("personnages", JSON.stringify(personnages));
+            }
+        }).open();
+    });
 }
 
 function stuffInit() {
