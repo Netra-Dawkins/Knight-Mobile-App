@@ -213,6 +213,12 @@ function createEmptyPerso() {
   perso['stats']['grenade']['total'] = 5;
 
   perso['equipement'] = {};
+  perso['equipement']['favoris'] = {};
+  perso['equipement']['arme'] = {};
+  perso['equipement']['module'] = {};
+  perso['equipement']['capacite'] = {};
+  perso['equipement']['pack'] = {};
+
   perso['note'] = {};
 
   return perso;
