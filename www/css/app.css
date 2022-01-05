@@ -92,6 +92,12 @@
   text-align: center;
 }
 
+.counterInput {
+  width: 40%;
+  text-align: center;
+  display: inline !important;
+}
+
 .statistic:first-child .statistic-value {
   border-radius: 5%;
 }
