@@ -11,11 +11,6 @@
         <div class="title">Knight Mobile App</div>
       </div>
     </div>
-    <div class="fab fab-right-bottom color-orange">
-      <a href="/personnage-creation/">
-        <i class="icon f7-icons">plus</i>
-      </a>
-    </div>
     <div class="page-content">
       ${listePersonnages.map(personnage => $h`
       <div class="card">
@@ -37,6 +32,11 @@
         </div>
       </div>
       `)}
+      <div class="home-plus-btn color-white">
+        <a href="/personnage-creation/">
+          <i class="icon f7-icons">plus</i>
+        </a>
+      </div>
     </div>
   </div>
 </template>
