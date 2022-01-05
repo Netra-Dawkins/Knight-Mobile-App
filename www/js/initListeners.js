@@ -32,13 +32,14 @@ function statsInit() {
 
     $('.open-dialog-aspect').on('taphold', function () {
         const statName = this.dataset.statName;
+        const aspectDiv = this.querySelector("div");
         var dialog = app.dialog.create({
             title: "Modifier l'Aspect",
             text: `
                <div class="statistic col-50">
                   <span class="statistic-name">${this.querySelector("span").innerHTML}</span>
                   <div class="statistic-value">
-                      <input type="number" class="statistic-input" value="${this.querySelector("div").innerHTML}"/>
+                      <input type="number" class="statistic-input" value="${aspectDiv.innerHTML}"/>
                   </div>
                </div>
             `,
@@ -46,6 +47,7 @@ function statsInit() {
             onClick: function (dialog, index) {
                 personnages[localStorage.getItem('currentPersonnage')]['stats'][statName] = dialog.$el.find('.statistic-input').val();
                 localStorage.setItem("personnages", JSON.stringify(personnages));
+                aspectDiv.innerHTML = dialog.$el.find('.statistic-input').val();
             }
         }).open();
     });
