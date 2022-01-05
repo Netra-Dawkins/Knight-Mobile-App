@@ -25,6 +25,27 @@ function personnageCreationInit() {
     });
 }
 
+function equipementCreationInit() {
+    setTimeout(function() {
+        app.toolbar.hide('.toolbar');
+    }, 0);
+
+    $('#submit-equipement-creation').on('click', function () {
+        const formData = app.form.convertToData('#form-equipement-creation');
+
+        const data = {
+            nom: formData.nom,
+            description: formData.description
+        };
+
+        const personnages = JSON.parse(localStorage.getItem("personnages"));
+        
+        personnages[localStorage.getItem("currentPersonnage")]['equipement'][formData.equipement] = data;
+
+        localStorage.setItem("personnages", JSON.stringify(personnages));
+    });
+}
+
 function homeInit() {
     document.querySelector('.toolbar-bottom').style.display = 'none';
     
@@ -118,8 +139,4 @@ function stuffInit() {
             <input type="text" value="${elements[1]}" />
         `);
     });
-}
-
-function equipementNewInit() {
-    console.log('ok!');
 }

@@ -24,35 +24,37 @@
         <div class="page-content">
             <div class="list accordion-list margin-vertical-half margin-top">
                 <ul>
-                    <li class="accordion-item">
-                        <a class="item-content item-link" href="#">
-                            <div class="item-inner">
-                                <div class="item-title">Armes</div>
-                            </div>
-                        </a>
-                        <div class="accordion-item-content">
-                            <div class="block">
-                                <div class="stuff-content">
-                                    <div class="list accordion-list">
-                                        <ul>
-                                            <li class="accordion-item open-dialog">
-                                                <a class="item-content item-link" href="#">
-                                                    <div class="item-inner">
-                                                        <div class="item-title">Item 1</div>
+                    ${Object.entries(personnage.equipement).map(equipement => $h `
+                        <li class="accordion-item">
+                            <a class="item-content item-link" href="#">
+                                <div class="item-inner">
+                                    <div class="item-title">${equipement[0]}</div>
+                                </div>
+                            </a>
+                            <div class="accordion-item-content">
+                                <div class="block">
+                                    <div class="stuff-content">
+                                        <div class="list accordion-list">
+                                            <ul>
+                                                <li class="accordion-item open-dialog">
+                                                    <a class="item-content item-link" href="#">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Nom equipement</div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="accordion-item-content">
+                                                        <div class="block">
+                                                            <p>Description equipement</p>
+                                                        </div>
                                                     </div>
-                                                </a>
-                                                <div class="accordion-item-content">
-                                                    <div class="block">
-                                                        <p>Chocotube</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
+                    `)}
                 </ul>
             </div>
         </div>

@@ -3,7 +3,7 @@
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
       <div class="left">
-        <a href="#" class="link back">
+        <a href="/stuff/" class="link back">
           <i class="icon icon-back"></i>
           <span class="if-not-md">Back</span>
         </a>
@@ -12,9 +12,53 @@
     </div>
   </div>
   <div class="page-content">
-
-    <h1>API HERE</h1>
-
+    <form id="form-equipement-creation">
+      <div class="block-title">Nouvel équipement</div>
+      <div class="list no-hairlines-md">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Type d'équipement</div>
+                <div class="item-input-wrap">
+                  <select name="equipement">
+                    <option value="arme">Arme</option>
+                    <option value="capacite">Capacité d'armure</option>
+                    <option value="pack">Pack</option>
+                    <option value="module">Module</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Nom</div>
+                <div class="item-input-wrap">
+                  <input name="nom" type="text" placeholder="Nom"/>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Description</div>
+                <div class="item-input-wrap">
+                  <textarea name="description" placeholder="Description"></textarea>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </form>
+    <div class="block">
+      <p class="row">
+        <a id="submit-equipement-creation" href="/stuff/" class="col button button-large button-fill button-raised color-green">Créer</a>
+      </p>
+    </div>
   </div>
 </div>
 

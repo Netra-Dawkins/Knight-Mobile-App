@@ -36,7 +36,7 @@ var routes = [
     url: './pages/equipementNew.html',
     on: {
       pageInit: function init(e, page) {
-        equipementNewInit();
+        equipementCreationInit();
       }
     }
   },
