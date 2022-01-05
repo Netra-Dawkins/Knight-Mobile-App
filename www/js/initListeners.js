@@ -102,3 +102,7 @@ function stuffInit() {
         `);
     });
 }
+
+function equipementNewInit() {
+    console.log('ok!');
+}

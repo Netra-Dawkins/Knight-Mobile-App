@@ -8,13 +8,18 @@
                         <i class="icon f7-icons">house_fill</i>
                     </a>
                 </div>
-                <div class="title center">Nom Appli</div>
+                <div class="title center">${personnage.nom}</div>
                 <div class="right">
                     <a href="#" class="link icon-only panel-open" data-panel="right">
                         <i class="icon f7-icons">menu</i>
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="fab fab-right-bottom color-orange">
+            <a href="/equipement-new/">
+                <i class="icon f7-icons">plus</i>
+            </a>
         </div>
         <div class="page-content">
             <div class="list accordion-list margin-vertical-half margin-top">
@@ -56,18 +61,7 @@
 
 <script>
     export default (props, { $f7, $on }) => {
-        const stuffs = JSON.parse(localStorage.getItem('stuffs'));
-        let listeStuffs = [];
-
-        if (stuffs) {
-            listeStuffs = Object.values(stuffs);
-
-            for (const [key, value] of Object.entries(stuffs)) {
-                if (value.length > 0) {
-                    console.log(`${key}: Titre : ${value[0].title}, Description : ${value[0].description}`);
-                }
-            }
-        }
+        const personnage = JSON.parse(localStorage.getItem('personnages'))[localStorage.getItem('currentPersonnage')];
         // component function must return render function
         return $render;
     }

@@ -41,6 +41,15 @@ var routes = [
     }
   },
   {
+    path: '/equipement-new/',
+    url: './pages/equipementNew.html',
+    on: {
+      pageInit: function init(e, page) {
+        equipementNewInit();
+      }
+    }
+  },
+  {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     componentUrl: './pages/dynamic-route.html',
   },
