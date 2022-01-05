@@ -236,15 +236,15 @@
                 <hr/>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.sante.actuel}" data-nb-total="${personnage.stats.sante.total}" data-counter-name="sante">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Points de santé</span>
                                 <span class="counter-value">${personnage.stats.sante.actuel} / ${personnage.stats.sante.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -252,15 +252,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.espoir.actuel}" data-nb-total="${personnage.stats.espoir.total}" data-counter-name="espoir">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Points d'espoir</span>
-                                <span class="counter-value">${personnage.stats.espoir.actuel} / ${personnage.stats.espoir.actuel}</span>
+                                <span class="counter-value">${personnage.stats.espoir.actuel} / ${personnage.stats.espoir.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -268,15 +268,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.armure.actuel}" data-nb-total="${personnage.stats.armure.total}" data-counter-name="armure">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Points d'armure</span>
-                                <span class="counter-value">${personnage.stats.armure.actuel} / ${personnage.stats.armure.actuel}</span>
+                                <span class="counter-value">${personnage.stats.armure.actuel} / ${personnage.stats.armure.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -284,15 +284,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.energie.actuel}" data-nb-total="${personnage.stats.energie.total}" data-counter-name="energie">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Points d'énergie</span>
-                                <span class="counter-value">${personnage.stats.energie.actuel} / ${personnage.stats.energie.actuel}</span>
+                                <span class="counter-value">${personnage.stats.energie.actuel} / ${personnage.stats.energie.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -300,15 +300,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.heroisme.actuel}" data-nb-total="${personnage.stats.heroisme.total}" data-counter-name="heroisme">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Points d'héroisme</span>
-                                <span class="counter-value">${personnage.stats.heroisme.actuel} / ${personnage.stats.heroisme.actuel}</span>
+                                <span class="counter-value">${personnage.stats.heroisme.actuel} / ${personnage.stats.heroisme.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -316,15 +316,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.contact.actuel}" data-nb-total="${personnage.stats.contact.total}" data-counter-name="contact">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Points de contact</span>
-                                <span class="counter-value">${personnage.stats.contact.actuel} / ${personnage.stats.contact.actuel}</span>
+                                <span class="counter-value">${personnage.stats.contact.actuel} / ${personnage.stats.contact.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -333,15 +333,15 @@
                 <hr/>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.nodArmure.actuel}" data-nb-total="${personnage.stats.nodArmure.total}" data-counter-name="nodArmure">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Nods d'armure</span>
-                                <span class="counter-value">${personnage.stats.nodArmure.actuel} / ${personnage.stats.nodArmure.actuel}</span>
+                                <span class="counter-value">${personnage.stats.nodArmure.actuel} / ${personnage.stats.nodArmure.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -349,15 +349,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.nodSoin.actuel}" data-nb-total="${personnage.stats.nodSoin.total}" data-counter-name="nodSoin">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Nods de soin</span>
-                                <span class="counter-value">${personnage.stats.nodSoin.actuel} / ${personnage.stats.nodSoin.actuel}</span>
+                                <span class="counter-value">${personnage.stats.nodSoin.actuel} / ${personnage.stats.nodSoin.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -365,15 +365,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.nodEnergie.actuel}" data-nb-total="${personnage.stats.nodEnergie.total}" data-counter-name="nodEnergie">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Nods d'énergie</span>
-                                <span class="counter-value">${personnage.stats.nodEnergie.actuel} / ${personnage.stats.nodEnergie.actuel}</span>
+                                <span class="counter-value">${personnage.stats.nodEnergie.actuel} / ${personnage.stats.nodEnergie.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus">
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
@@ -381,15 +381,15 @@
                 </div>
                 <div class="counter card">
                     <div class="card-content">
-                        <div class="counter-content row display-flex align-items-center text-align-center">
-                            <div class="col-15">
+                        <div class="counter-content row display-flex align-items-center text-align-center" data-nb-actuel="${personnage.stats.grenade.actuel}" data-nb-total="${personnage.stats.grenade.total}" data-counter-name="grenade">
+                            <div class="col-15 counter-button-minus">
                                 <i class="icon f7-icons">minus</i>
                             </div>
-                            <div class="counter-main-container col-70 display-flex flex-direction-column">
+                            <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                                 <span class="counter-label">Grenade intelligente</span>
-                                <span class="counter-value">${personnage.stats.grenade.actuel} / ${personnage.stats.grenade.actuel}</span>
+                                <span class="counter-value">${personnage.stats.grenade.actuel} / ${personnage.stats.grenade.total}</span>
                             </div>
-                            <div class="col-15">
+                            <div class="col-15 counter-button-plus" >
                                 <i class="icon f7-icons">plus</i>
                             </div>
                         </div>
