@@ -62,99 +62,50 @@ $('#my-login-screen .login-button').on('click', function () {
   app.dialog.alert('Username: ' + username + '<br/>Password: ' + password);
 });
 
+function setDefaultPersoValues(perso, isAspect, category, specificationTab) {
+  switch (category) {
+    case 'stats':
+      if (isAspect === true) {
+        specificationTab.forEach(specification => {
+          perso['stats'][specification] = 0;
+        })
+      } else {
+        specificationTab.forEach(specification => {
+          perso['stats'][specification] = {};
+          perso['stats'][specification]['base'] = 0;
+          perso['stats'][specification]['od'] = 0;
+        })
+      }
+      break;
+    case 'equipement':
+      specificationTab.forEach(specification => {
+        perso['equipement'][specification] = {};
+      })
+      break;
+    default:
+      category.forEach(currentCategory => {
+        perso[currentCategory] = '';
+      })
+  }
+}
+
 function createEmptyPerso() {
   const perso = {};
 
-
-  perso['id'] = '';
-
-  perso['genre'] = '';
-  perso['armure'] = '';
-  perso['nom'] = '';
-  perso['surnom'] = '';
-  perso['nomIA'] = '';
-  perso['archetype'] = '';
-  perso['hautFait'] = '';
-  perso['section'] = '';
-  perso['avantages'] = '';
-  perso['inconvenients'] = '';
-  perso['motivationMajeure'] = '';
-  perso['motivationsMineures'] = '';
-  perso['langes'] = '';
   perso['dateNaissance'] = new Date();
-  perso['bio'] = '';
-
   perso['stats'] = {};
+  perso['equipement'] = {};
+  perso['note'] = {};
 
-  perso['stats']['chair'] = 0;
+  const characterTab = ['id', 'genre', 'armure', 'nom', 'surnom', 'nomIA', 'archetype', 'hautFait', 'section', 'avantages', 'inconvenients', 'motivationMajeure', 'motivationsMineures', 'langues', 'bio'];
+  const aspectTab = ['chair', 'bete', 'machine', 'dame', 'masque'];
+  const caracTab = ['deplacement', 'force', 'endurance', 'hargne', 'combat', 'instinct', 'tir', 'savoir', 'technique', 'aura', 'parole', 'sangFroid', 'discretion', 'dexterite', 'perception'];
+  const equipementTab = ['favoris', 'arme', 'module', 'capacite', 'pack'];
 
-  perso['stats']['deplacement'] = {};
-  perso['stats']['deplacement']['base'] = 0;
-  perso['stats']['deplacement']['od'] = 0;
-
-  perso['stats']['force'] = {};
-  perso['stats']['force']['base'] = 0;
-  perso['stats']['force']['od'] = 0;
-
-  perso['stats']['endurance'] = {};
-  perso['stats']['endurance']['base'] = 0;
-  perso['stats']['endurance']['od'] = 0;
-
-  perso['stats']['bete'] = 0;
-
-  perso['stats']['hargne'] = {};
-  perso['stats']['hargne']['base'] = 0;
-  perso['stats']['hargne']['od'] = 0;
-
-  perso['stats']['combat'] = {};
-  perso['stats']['combat']['base'] = 0;
-  perso['stats']['combat']['od'] = 0;
-
-  perso['stats']['instinct'] = {};
-  perso['stats']['instinct']['base'] = 0;
-  perso['stats']['instinct']['od'] = 0;
-
-  perso['stats']['machine'] = 0;
-
-  perso['stats']['tir'] = {};
-  perso['stats']['tir']['base'] = 0;
-  perso['stats']['tir']['od'] = 0;
-
-  perso['stats']['savoir'] = {};
-  perso['stats']['savoir']['base'] = 0;
-  perso['stats']['savoir']['od'] = 0;
-
-  perso['stats']['technique'] = {};
-  perso['stats']['technique']['base'] = 0;
-  perso['stats']['technique']['od'] = 0;
-
-  perso['stats']['dame'] = 0;
-
-  perso['stats']['aura'] = {};
-  perso['stats']['aura']['base'] = 0;
-  perso['stats']['aura']['od'] = 0;
-
-  perso['stats']['parole'] = {};
-  perso['stats']['parole']['base'] = 0;
-  perso['stats']['parole']['od'] = 0;
-
-  perso['stats']['sangFroid'] = {};
-  perso['stats']['sangFroid']['base'] = 0;
-  perso['stats']['sangFroid']['od'] = 0;
-
-  perso['stats']['masque'] = 0;
-
-  perso['stats']['discretion'] = {};
-  perso['stats']['discretion']['base'] = 0;
-  perso['stats']['discretion']['od'] = 0;
-
-  perso['stats']['dexterite'] = {};
-  perso['stats']['dexterite']['base'] = 0;
-  perso['stats']['dexterite']['od'] = 0;
-
-  perso['stats']['perception'] = {};
-  perso['stats']['perception']['base'] = 0;
-  perso['stats']['perception']['od'] = 0;
+  setDefaultPersoValues(perso, false, characterTab);
+  setDefaultPersoValues(perso, true, 'stats', aspectTab);
+  setDefaultPersoValues(perso, false, 'stats', caracTab);
+  setDefaultPersoValues(perso, false, 'equipement', equipementTab);
 
   perso['stats']['defense'] = {};
   perso['stats']['defense']['max'] = 0;
@@ -211,15 +162,6 @@ function createEmptyPerso() {
   perso['stats']['grenade'] = {};
   perso['stats']['grenade']['actuel'] = 5;
   perso['stats']['grenade']['total'] = 5;
-
-  perso['equipement'] = {};
-  perso['equipement']['favoris'] = {};
-  perso['equipement']['arme'] = {};
-  perso['equipement']['module'] = {};
-  perso['equipement']['capacite'] = {};
-  perso['equipement']['pack'] = {};
-
-  perso['note'] = {};
 
   return perso;
 }
