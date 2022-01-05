@@ -1,17 +1,31 @@
 
 function personnageCreationInit() {
     $('#submit-personnage-creation').on('click', function () {
-        const perso = app.form.convertToData('#form-personnage-creation');
+        const perso = createEmptyPerso();
         const id = app.utils.id().toString();
 
-        let dataArray = {};
-        if(!localStorage.getItem('personnages')) {
-            dataArray[id] = perso;
-            localStorage.setItem('personnages', JSON.stringify(dataArray));
-        } else {
-            dataArray = JSON.parse(localStorage.getItem('personnages'));
-            dataArray[id] = perso;
-            localStorage.setItem('personnages', JSON.stringify(dataArray));
+        perso['id'] = id;
+
+        for (const [key, value] of Object.entries(app.form.convertToData('#form-personnage-creation'))) {
+            console.log(value);
+            perso[key] = value;
         }
+
+        let dataArray = JSON.parse(localStorage.getItem("personnages"));
+        dataArray[perso["id"]] = perso;
+        localStorage.setItem("personnages", JSON.stringify(dataArray));
+
+
+        localStorage.setItem('currentPersonnage', perso.id);
+
+        location.reload();
+    });
+}
+
+function homeInit() {
+    $('.personnageRedirection').on('click', function (e) {
+        console.log(this.dataset.personnageId);
+        localStorage.setItem('currentPersonnage', this.dataset.personnageId);
+
     });
 }

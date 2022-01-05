@@ -89,8 +89,8 @@
 }
 
 .statistic-value {
-  background-color: #000;
-  border: solid .5px rgb(156, 156, 156);
+  background-color: #1e1e1e;
+  border: solid .1px rgb(156, 156, 156);
   border-radius: 50%;
   font-size: 6vw;
   width: 14vw;

@@ -7,6 +7,11 @@ var routes = [
   {
     path: '/home',
     componentUrl: './pages/home.html',
+    on: {
+      pageInit: function init(e, page) {
+        homeInit();
+      }
+    }
   },
   {
     path: '/personnage-creation/',
@@ -19,7 +24,7 @@ var routes = [
   },
   {
     path: '/stats/',
-    url: './pages/stats.html',
+    componentUrl: './pages/stats.html',
   },
   {
     path: '/stuff/',

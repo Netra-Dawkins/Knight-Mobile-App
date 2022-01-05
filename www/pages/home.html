@@ -29,8 +29,8 @@
               </p>
             </div>
             <div class="col-25">
-              <a href="/stats/" data-personnage-id="">
-                <i class="icon f7-icons">play_fill</i>
+              <a href="/stats/" class="personnageRedirection" data-personnage-id="${personnage.id}">
+                <i class="icon f7-icons ">play_fill</i>
               </a>
             </div>
           </div>
@@ -46,7 +46,10 @@
     const personnages = JSON.parse(localStorage.getItem('personnages'));
     const listePersonnages = [];
     Object.keys(personnages).forEach(key => {
-      listePersonnages.push(personnages[key])
+      if (key!=="empty") {
+        personnages[key]['id']=key;
+        listePersonnages.push(personnages[key]);
+      }
     });
     // component function must return render function
     return $render;
