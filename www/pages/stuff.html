@@ -36,18 +36,20 @@
                                     <div class="stuff-content">
                                         <div class="list accordion-list">
                                             <ul>
-                                                <li class="accordion-item open-dialog">
-                                                    <a class="item-content item-link" href="#">
-                                                        <div class="item-inner">
-                                                            <div class="item-title">Nom equipement</div>
+                                                ${Object.keys(equipement[1]).length > 0 ? $h `
+                                                    <li class="accordion-item open-dialog">
+                                                        <a class="item-content item-link" href="#">
+                                                            <div class="item-inner">
+                                                                <div class="item-title">${equipement[1].nom}</div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="accordion-item-content">
+                                                            <div class="block">
+                                                                <p>${equipement[1].description}t</p>
+                                                            </div>
                                                         </div>
-                                                    </a>
-                                                    <div class="accordion-item-content">
-                                                        <div class="block">
-                                                            <p>Description equipement</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                    </li>
+                                                ` : null}
                                             </ul>
                                         </div>
                                     </div>
