@@ -28,7 +28,12 @@ var routes = [
   },
   {
     path: '/stuff/',
-    url: './pages/stuff.html',
+    componentUrl: './pages/stuff.html',
+    on: {
+      pageInit: function init(e, page) {
+        stuffInit();
+      }
+    }
   },
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',

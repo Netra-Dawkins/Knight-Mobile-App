@@ -1,23 +1,74 @@
-<div class="page" data-name="stats">
-    <div class="navbar">
-        <div class="navbar-bg"></div>
-        <div class="navbar-inner sliding">
-            <div class="left">
-                <a href="/home/" class="link icon-only">
-                    <i class="icon f7-icons">house_fill</i>
-                </a>
+<template>
+    <div class="page" data-name="stuff">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="/home/" class="link icon-only">
+                        <i class="icon f7-icons">house_fill</i>
+                    </a>
+                </div>
+                <div class="title center">Nom Appli</div>
+                <div class="right">
+                    <a href="#" class="link icon-only panel-open" data-panel="right">
+                        <i class="icon f7-icons">menu</i>
+                    </a>
+                </div>
             </div>
-            <div class="title center">Nom Appli</div>
-            <div class="right">
-                <a href="#" class="link icon-only panel-open" data-panel="right">
-                    <i class="icon f7-icons">menu</i>
-                </a>
+        </div>
+        <div class="page-content">
+            <div class="list accordion-list margin-vertical-half margin-top">
+                <ul>
+                    <li class="accordion-item">
+                        <a class="item-content item-link" href="#">
+                            <div class="item-inner">
+                                <div class="item-title">Armes</div>
+                            </div>
+                        </a>
+                        <div class="accordion-item-content">
+                            <div class="block">
+                                <div class="stuff-content">
+                                    <div class="list accordion-list">
+                                        <ul>
+                                            <li class="accordion-item open-dialog">
+                                                <a class="item-content item-link" href="#">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Item 1</div>
+                                                    </div>
+                                                </a>
+                                                <div class="accordion-item-content">
+                                                    <div class="block">
+                                                        <p>Trop fort pour toi dégage sale chocotube</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="page-content">
-        <div class="row display-flex align-items-center text-align-center">
+</template>
 
-        </div>
-    </div>
-</div>
+<script>
+    export default (props, { $f7, $on }) => {
+        const stuffs = JSON.parse(localStorage.getItem('stuffs'));
+        let listeStuffs = [];
+
+        if (stuffs) {
+            listeStuffs = Object.values(stuffs);
+
+            for (const [key, value] of Object.entries(stuffs)) {
+                if (value.length > 0) {
+                    console.log(`${key}: Titre : ${value[0].title}, Description : ${value[0].description}`);
+                }
+            }
+        }
+        // component function must return render function
+        return $render;
+    }
+</script>

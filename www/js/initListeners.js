@@ -29,3 +29,28 @@ function homeInit() {
 
     });
 }
+
+function stuffInit() {
+    const stuffs = JSON.parse(localStorage.getItem('stuffs'));
+
+    if (!stuffs) {
+        localStorage.setItem('stuffs', JSON.stringify({
+            Favoris: [],
+            Armes: [],
+            Modules: [],
+            Capacités: [],
+            Pack: [],
+        }));
+    }
+
+
+    $('.open-dialog').on('taphold', function () {
+        const elements = [this][0].innerText.split('\n\n');
+
+        app.dialog.alert(`
+            <input type="text" value="${elements[0]}" />
+            <br />
+            <input type="text" value="${elements[1]}" />
+        `);
+    });
+}
