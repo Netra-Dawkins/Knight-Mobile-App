@@ -43,6 +43,7 @@ function statsInit() {
                   </div>
                </div>
             `,
+            closeByBackdropClick: true,
             buttons: [{text: '<i class="icon f7-icons">checkmark_2</i>'}],
             onClick: function (dialog, index) {
                 personnages[localStorage.getItem('currentPersonnage')]['stats'][statName] = dialog.$el.find('.statistic-input').val();
