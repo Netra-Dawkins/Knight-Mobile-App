@@ -93,6 +93,51 @@ function statsInit() {
             }
         }).open();
     });
+
+    $('.counter-button-plus').on('click', function () {
+        if(parseInt(this.parentNode.dataset.nbActuel) < parseInt(this.parentNode.dataset.nbTotal)) {
+            this.parentNode.dataset.nbActuel=parseInt(this.parentNode.dataset.nbActuel)+1;
+            console.log(this.parentNode.dataset.nbActuel);
+            this.parentNode.querySelector('.counter-value').firstChild.data = this.parentNode.dataset.nbActuel;
+            personnages[localStorage.getItem("currentPersonnage")]['stats'][this.parentNode.dataset.counterName]['actuel'] = this.parentNode.dataset.nbActuel;
+            localStorage.setItem("personnages", JSON.stringify(personnages));
+        }
+    });
+
+    $('.counter-button-minus').on('click', function () {
+        if(this.parentNode.dataset.nbActuel > 0) {
+            this.parentNode.dataset.nbActuel-=1;
+            this.parentNode.querySelector('.counter-value').firstChild.data = this.parentNode.dataset.nbActuel;
+            personnages[localStorage.getItem("currentPersonnage")]['stats'][this.parentNode.dataset.counterName]['actuel'] = this.parentNode.dataset.nbActuel;
+            localStorage.setItem("personnages", JSON.stringify(personnages));
+        }
+    });
+
+    $('.open-dialog-counter').on('taphold', function () {
+        const statName = this.parentNode.dataset.counterName;
+        const counterDiv = this.parentNode;
+        const counterValue = this.querySelector(".counter-value");
+
+        var dialog = app.dialog.create({
+            title: "Modifier la Caractéristique",
+            text: `
+               <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
+                   <span class="counter-label">${this.querySelector("span").innerHTML}</span>
+                   <span class="counter-value"><input id="counter-input-actuel" type="number" value="${this.querySelector('.counter-value').firstChild.data}"> / <input type="number" id="counter-input-total" value="${this.querySelector('.counter-value').lastChild.data}"></span>
+               </div>
+            `,
+            buttons: [{text: '<i class="icon f7-icons">checkmark_2</i>'}],
+            onClick: function (dialog, index) {
+                personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['actuel'] = dialog.$el.find('#counter-input-actuel').val();
+                personnages[localStorage.getItem('currentPersonnage')]['stats'][statName]['total'] = dialog.$el.find('#counter-input-total').val();
+                localStorage.setItem("personnages", JSON.stringify(personnages));
+                counterValue.firstChild.data = dialog.$el.find('#counter-input-actuel').val();
+                counterValue.lastChild.data = dialog.$el.find('#counter-input-total').val();
+                counterDiv.dataset.nbActuel = dialog.$el.find('#counter-input-actuel').val();
+                counterDiv.dataset.nbTotal = dialog.$el.find('#counter-input-total').val();
+            }
+        }).open();
+    });
 }
 
 function stuffInit() {
