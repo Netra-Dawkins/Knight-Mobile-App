@@ -144,7 +144,7 @@ function statsInit() {
             text: `
                <div class="counter-main-container col-70 display-flex flex-direction-column open-dialog-counter">
                    <span class="counter-label">${this.querySelector("span").innerHTML}</span>
-                   <span class="counter-value"><input id="counter-input-actuel" type="number" value="${this.querySelector('.counter-value').firstChild.data}"> / <input type="number" id="counter-input-total" value="${this.querySelector('.counter-value').lastChild.data}"></span>
+                   <span class="counter-value"><input id="counter-input-actuel" class="counterInput" type="number" value="${this.querySelector('.counter-value').firstChild.data}"> / <input type="number" class="counterInput" id="counter-input-total" value="${this.querySelector('.counter-value').lastChild.data}"></span>
                </div>
             `,
             buttons: [{text: '<i class="icon f7-icons">checkmark_2</i>'}],
